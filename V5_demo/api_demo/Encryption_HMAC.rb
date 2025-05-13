@@ -21,7 +21,7 @@ def HTTP_Request(endPoint,method,payload)
         request = Net::HTTP::Post.new(fullUrl,'Content-Type' => 'application/json')
         request.body = payload
     elsif method == "GET"
-        payload="?"+payload
+        payload = "?"+payload
         fullUrl = $url + endPoint + payload
         request = Net::HTTP::Get.new(fullUrl)
     else
